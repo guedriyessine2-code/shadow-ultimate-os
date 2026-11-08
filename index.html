@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SHADOW ULTIMATE OS</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;background:#080808;color:white;
+ font-family:Arial,sans-serif
+}
+header{
+ padding:22px 8%;background:#111;
+ border-bottom:2px solid #e00020;
+ display:flex;justify-content:space-between;
+ align-items:center;flex-wrap:wrap;gap:15px
+}
+.logo{font-size:21px;font-weight:bold}
+.logo span,h1 span{color:#ed102c}
+nav{display:flex;gap:16px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-size:13px}
+nav a:hover{color:#ed102c}
+.hero{
+ min-height:75vh;padding:100px 8%;
+ display:flex;flex-direction:column;
+ justify-content:center;
+ background:radial-gradient(circle at 80% 40%,#380009,#080808 60%)
+}
+.hero small{color:#ed102c;letter-spacing:4px}
+h1{font-size:clamp(42px,8vw,80px);margin:15px 0}
+p{color:#aaa;line-height:1.8}
+.btn{
+ display:inline-block;padding:13px 22px;
+ background:#ed102c;color:white;
+ text-decoration:none;font-weight:bold;
+ margin:15px 10px 0 0
+}
+section{padding:75px 8%;border-top:1px solid #292929}
+h2{font-size:32px}
+h2 span{color:#ed102c}
+.grid{
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+ gap:18px
+}
+.card{
+ background:#141414;border:1px solid #333;
+ padding:25px;border-radius:5px
+}
+.card h3{color:#ed102c}
+.status{color:#ff5368;font-weight:bold}
+footer{
+ padding:25px;text-align:center;
+ background:#111;color:#777
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">SHADOW <span>ULTIMATE OS</span></div>
+<nav>
+<a href="#home">HOME</a>
+<a href="#download">DOWNLOAD</a>
+<a href="#features">FEATURES</a>
+<a href="#apps">APPS</a>
+<a href="#updates">UPDATES</a>
+<a href="#support">SUPPORT</a>
+</nav>
+</header>
+
+<div class="hero" id="home">
+<small>SHADOW — ENTER THE DARK</small>
+<h1>ENTER THE <span>SHADOW.</span></h1>
+<p>A new vision of a lightweight operating system.<br>
+Built for a clean and modern computer experience.</p>
+<a class="btn" href="#download">EXPLORE SHADOW</a>
+</div>
+
+<section id="download">
+<h2>DOWNLOAD <span>SHADOW</span></h2>
+<div class="card">
+<h3>SHADOW ULTIMATE OS</h3>
+<p class="status">COMING SOON</p>
+<p>The official system image is not ready yet.
+The download will appear here when a tested release is available.</p>
+</div>
+</section>
+
+<section id="features">
+<h2>OUR <span>FEATURES</span></h2>
+<div class="grid">
+<div class="card"><h3>LIGHTWEIGHT</h3><p>Designed with low-resource computers in mind.</p></div>
+<div class="card"><h3>FILE EXPLORER</h3><p>A planned tool for browsing your files.</p></div>
+<div class="card"><h3>MODERN DESIGN</h3><p>A minimal dark interface with red details.</p></div>
+<div class="card"><h3>APP STORE</h3><p>A software store is part of the project plan.</p></div>
+</div>
+</section>
+
+<section id="apps">
+<h2>SHADOW <span>APPS</span></h2>
+<p>Applications will be listed here when they are ready.</p>
+</section>
+
+<section id="updates">
+<h2>PROJECT <span>UPDATES</span></h2>
+<div class="card">
+<h3>Website launched</h3>
+<p>The official SHADOW ULTIMATE OS website is being prepared.</p>
+</div>
+</section>
+
+<section id="support">
+<h2>SHADOW <span>SUPPORT</span></h2>
+<p>Have an idea or question about the project?</p>
+<a class="btn" href="https://github.com/guedriyessine2-code/shadow-ultimate-os">GITHUB</a>
+</section>
+
+<footer>
+SHADOW ULTIMATE OS<br>
+SHADOW — ENTER THE DARK
+</footer>
+
+</body>
+</html>
