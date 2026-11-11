@@ -1,0 +1,54 @@
+
+name: Build SHADOW ULTIMATE OS
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Free disk space
+        run: |
+          sudo rm -rf /usr/local/lib/android /usr/share/dotnet /opt/ghc
+          sudo rm -rf /usr/local/share/boost /usr/share/swift
+          sudo apt-get clean
+          df -h /
+
+      - name: Unpack source
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y unzip
+          mkdir source
+          unzip -q SHADOW_ULTIMATE_OS_build_source_v3.zip -d source
+
+      - name: Build ISO
+        working-directory: source
+        run: |
+          chmod +x build.sh
+          sudo ./build.sh
+
+      - name: Check ISO
+        run: |
+          set -e
+          ISO=$(find source -type f -iname '*.iso' -print -quit)
+          test -n "$ISO"
+          test "$(stat -c%s "$ISO")" -le 7516192768
+
+      - name: Upload ISO
+        uses: actions/upload-artifact@v4
+        with:
+          name: SHADOW-ULTIMATE-OS-ISO
+          path: source/**/*.iso
+          if-no-files-found: error
+          retention-days: 3
+concurrency:
+  
