@@ -50,5 +50,3 @@ jobs:
           path: source/**/*.iso
           if-no-files-found: error
           retention-days: 3
-concurrency:
-  
